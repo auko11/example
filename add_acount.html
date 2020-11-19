@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <form>
+    <p>아이디
+      <input type="_blank" placeholder="최소 4글자" >
+      <input type="button" name="name" value="아이디 확인" onclick="
+      alert('이 아이디는 사용가능 합니다.')"></p>
+    <p>비밀번호
+      <input type="_blank" placeholder="문자, 특수문자포함">
+      <input type="button" name="password" value="비밀번호 확인" onclick="
+      alert('이 비밀번호는 사용가능 합니다.')"></p>
+    <p>비밀번호 확인
+      <input type="_blank" placeholder="비밀번호 입력">
+      <input type="button" name="passwordcheck" value="비밀번호 확인" onclick="
+      alert('이 아이디는 사용가능 합니다.')"></p>
+    <p>성별
+      <input type="radio" name="gender" value="male">남자
+      <input type="radio" name="gender" value="female">여자
+    </p>
+
+    <p>생년월일
+      <script language="javascript">
+        var today = new Date();
+        var toyear = parseInt(today.getYear());
+        var start = toyear;
+        var end = toyear - 100;
+
+
+          document.write("<font size=2><select name=birth1>");
+          document.write("<option value='' selected>");
+
+        for (i=start;i>=end;i--) document.write("<option>"+i);
+          document.write("</select>년  ");
+          document.write("<select name=birth2>");
+          document.write("<option value='' selected>");
+
+        for (i=1;i<=12;i++) document.write("<option>"+i);
+          document.write("</select>월  ");
+          document.write("<select name=birth3>");
+          document.write("<option value='' selected>");
+
+        for (i=1;i<=31;i++) document.write("<option>"+i);
+          document.write("</select>일  </font>");
+      </script>
+
+    </p>
+    <p>주소
+      <select>
+        <option value="서울특별시">서울특별시</option>
+        <option value="인천광역시">인천광역시</option>
+        <option value="대전광역시">대전광역시</option>
+        <option value="광주광역시">광주광역시</option>
+        <option value="대구광역시">대구광역시</option>
+        <option value="울산광역시">울산광역시</option>
+        <option value="부산광역시">부산광역시</option>
+        <option value="강원도">강원도</option>
+        <option value="충청북도">충청북도</option>
+        <option value="충청남도">충청남도</option>
+        <option value="전라북도">전라북도</option>
+        <option value="전라남도">전라남도</option>
+        <option value="경상북도">경상북도</option>
+        <option value="경상남도">경상남도</option>
+        <option value="제주특별자치도">제주특별자치도</option>
+      </select>
+      <input type="_blank" placeholder="우편번호" style="width : 150px;">
+      <input type="_blank" placeholder="나머지 주소입력" style="width : 500px;">
+    </p>
+    <p>휴대전화
+      <select>
+        <option value="010">010</option>
+      </select>
+      <input type="_blank" name="n1" style="width : 50px;">
+      <input type="_blank" name="n2" style="width : 50px;">
+    </p>
+    </form>
+
+  </body>
+</html>
